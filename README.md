@@ -1,6 +1,6 @@
 # Simple To-do
 
-<div style="width: 100%; text-align: center; align-items: center">
+<div style="width: 100%; text-align: center;" align="center">
     <img height="350px" src="./image.png">
 </div>
 
