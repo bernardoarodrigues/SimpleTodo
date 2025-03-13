@@ -15,7 +15,7 @@ const TodoItem = ({ todo, todos, setTodos }) => {
         try {
             // Edits to-do description
             const body = { description, finished }
-            const response = await fetch(`http://localhost:5000/todos/${id}`, {
+            const response = await fetch(`http://localhost:5001/todos/${id}`, {
                 method: "PUT",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(body)
@@ -39,7 +39,7 @@ const TodoItem = ({ todo, todos, setTodos }) => {
             // Edits to-do finished state
             const { description } = todo
             const body = { description, finished }
-            const response = await fetch(`http://localhost:5000/todos/${id}`, {
+            const response = await fetch(`http://localhost:5001/todos/${id}`, {
                 method: "PUT",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(body)
@@ -61,7 +61,7 @@ const TodoItem = ({ todo, todos, setTodos }) => {
     const deleteTodo = async (id) => {
         try {
             // Deletes to-do
-            const response = await fetch(`http://localhost:5000/todos/${id}`, {
+            const response = await fetch(`http://localhost:5001/todos/${id}`, {
                 method: "DELETE"
             })
             // If the query was successful, updates to-do list
